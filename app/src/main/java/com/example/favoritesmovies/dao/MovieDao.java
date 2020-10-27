@@ -7,7 +7,6 @@ import androidx.room.Insert;
 import androidx.room.Query;
 import androidx.room.Update;
 
-import com.example.favoritesmovies.model.Genre;
 import com.example.favoritesmovies.model.Movie;
 
 import java.util.List;
@@ -25,6 +24,6 @@ public interface MovieDao {
     @Query("select * from movies_table")
     LiveData<List<Movie>> getAllMovie();
     @Query("select * from movies_table where genre_id==:genreId")
-    LiveData<List<Genre>> getGenresMovies(int genreId);
+    LiveData<List<Movie>> getGenreMovies(int genreId);
 }
 
